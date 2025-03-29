@@ -20,6 +20,11 @@ public class PayPal {
         if (amount <= 0) {
             return "El monto debe ser mayor que cero.";
         }
-        return "Pago realizado con PayPal por la cantidad de: " + amount;
+        try {
+            // Lógica del pago
+            return "Pago realizado con PayPal por la cantidad de: " + amount;
+        } catch (Exception e) {
+            return "Error al realizar el pago con PayPal: " + e.getMessage();
+        }
     }
 }
