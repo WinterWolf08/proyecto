@@ -37,11 +37,14 @@ public class Pedido {
             return "El monto debe ser mayor que cero.";
         }
 
-        if (paymentAdapter != null) {
-            paymentAdapter.processPayment(amount);
-            return "Payment processed with amount: " + amount;
-        } else {
-            return "No se ha configurado un adaptador de pago.";
+        try {
+            if (paymentAdapter != null) {
+                return paymentAdapter.processPayment(amount);
+            } else {
+                return "No se ha configurado un adaptador de pago.";
+            }
+        } catch (Exception e) {
+            return "Error al procesar el pago: " + e.getMessage();
         }
     }
 }
