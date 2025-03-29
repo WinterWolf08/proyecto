@@ -4,8 +4,10 @@
 
 package co.edu.poli.ejemplo1.project;
 
-import co.poli.edu.ejemplo1.modelo.Model.co.poli.edu.ejemplo1.modelo.Pedido;
+import co.poli.edu.ejemplo1.modelo.Pedido;
+import co.poli.edu.ejemplo1.modelo.payment.Nequi;
 import co.poli.edu.ejemplo1.modelo.payment.NequiAdapter;
+import co.poli.edu.ejemplo1.modelo.payment.PayPal;
 import co.poli.edu.ejemplo1.modelo.payment.PayPalAdapter;
 import co.poli.edu.ejemplo1.modelo.payment.PaymentAdapter;
 
