@@ -45,11 +45,12 @@ public class Pedido {
         this.paymentAdapter = paymentAdapter;
     }
 
-    public void processPayment(double amount) {
+    public String processPayment(double amount) {
         if (paymentAdapter != null) {
             paymentAdapter.processPayment(amount);
+            return "Payment processed with amount: " + amount;
         } else {
-            System.out.println("No se ha configurado un adaptador de pago.");
+            return "No se ha configurado un adaptador de pago.";
         }
     }
 }
