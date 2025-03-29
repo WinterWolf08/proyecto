@@ -6,8 +6,8 @@ package co.poli.edu.ejemplo1.modelo.payment;
 
 public class NequiAdapter implements PaymentAdapter {
     @Override
-    public void processPayment(double amount) {
+    public String processPayment(double amount) {
         // Lógica para procesar el pago con Nequi
-        System.out.println("Pago de " + amount + " procesado con Nequi.");
+        return "Pago de " + amount + " procesado con Nequi.";
     }
 }
