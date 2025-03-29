@@ -30,13 +30,17 @@ public class Project {
         Pedido pedido = new Pedido();
 
         // Configurar y procesar el pago con Nequi
-        System.out.println("Procesando pago con Nequi:");
-        pedido.setPaymentAdapter(nequiAdapter);
-        pedido.processPayment(100.0);
+        String resultadoNequi = procesarPago(pedido, nequiAdapter, 100.0);
+        System.out.println(resultadoNequi);
 
         // Configurar y procesar el pago con PayPal
-        System.out.println("Procesando pago con PayPal:");
-        pedido.setPaymentAdapter(paypalAdapter);
-        pedido.processPayment(200.0);
+        String resultadoPayPal = procesarPago(pedido, paypalAdapter, 200.0);
+        System.out.println(resultadoPayPal);
+    }
+
+    private static String procesarPago(Pedido pedido, PaymentAdapter adapter, double monto) {
+        pedido.setPaymentAdapter(adapter);
+        pedido.processPayment(monto);
+        return "Pago procesado con " + adapter.getClass().getSimpleName() + ": $" + monto;
     }
 }
