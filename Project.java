@@ -41,7 +41,10 @@ public class Project {
 
     private static String procesarPago(final Pedido pedido, final PaymentAdapter adapter, final double monto) {
         pedido.setPaymentAdapter(adapter);
-        pedido.processPayment(monto);
-        return "Pago procesado con " + adapter.getClass().getSimpleName() + ": $" + monto;
+        try {
+            return pedido.processPayment(monto);
+        } catch (Exception e) {
+            return "Error al procesar el pago: " + e.getMessage();
+        }
     }
 }
