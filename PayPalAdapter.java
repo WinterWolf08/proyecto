@@ -6,8 +6,8 @@ package co.poli.edu.ejemplo1.modelo.payment;
 
 public class PayPalAdapter implements PaymentAdapter {
     @Override
-    public void processPayment(double amount) {
+    public String processPayment(double amount) {
         // Lógica para procesar el pago con PayPal
-        System.out.println("Pago de " + amount + " procesado con PayPal.");
+        return "Pago de " + amount + " procesado con PayPal.";
     }
 }
