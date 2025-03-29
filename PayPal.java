@@ -1,6 +1,6 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit este template
  */
 package co.edu.poli.ejemplo1.project;
 
@@ -17,6 +17,9 @@ public class PayPal {
      * @return Un mensaje indicando el resultado del pago.
      */
     public String sendPayment(final double amount) {
+        if (amount <= 0) {
+            return "El monto debe ser mayor que cero.";
+        }
         return "Pago realizado con PayPal por la cantidad de: " + amount;
     }
 }
