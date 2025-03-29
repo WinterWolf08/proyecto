@@ -5,12 +5,18 @@
 package co.edu.poli.ejemplo1.project;
 
 /**
- *
- * @author USUARIO
+ * Clase para manejar pagos con PayPal.
+ * 
+ * @autor USUARIO
  */
 public class PayPal {
-    public String sendPayment(double amount) {
+    /**
+     * Envía un pago con PayPal.
+     * 
+     * @param amount El monto a pagar.
+     * @return Un mensaje indicando el resultado del pago.
+     */
+    public String sendPayment(final double amount) {
         return "Pago realizado con PayPal por la cantidad de: " + amount;
     }
-    
 }
