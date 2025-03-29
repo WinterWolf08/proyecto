@@ -13,7 +13,11 @@ public class NequiAdapter implements PaymentAdapter {
         if (amount <= 0) {
             return "El monto debe ser mayor que cero.";
         }
-        // Lógica para procesar el pago con Nequi
-        return "Pago de " + amount + " procesado con Nequi.";
+        try {
+            // Lógica para procesar el pago con Nequi
+            return "Pago de " + amount + " procesado con Nequi.";
+        } catch (Exception e) {
+            return "Error al procesar el pago con Nequi: " + e.getMessage();
+        }
     }
 }
