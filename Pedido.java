@@ -33,6 +33,10 @@ public class Pedido {
      * @return Un mensaje indicando el resultado del pago.
      */
     public String processPayment(final double amount) {
+        if (amount <= 0) {
+            return "El monto debe ser mayor que cero.";
+        }
+
         if (paymentAdapter != null) {
             paymentAdapter.processPayment(amount);
             return "Payment processed with amount: " + amount;
