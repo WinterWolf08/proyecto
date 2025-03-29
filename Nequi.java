@@ -9,8 +9,8 @@ package co.edu.poli.ejemplo1.project;
  * @author USUARIO
  */
 public class Nequi {
-    public void realizarPago(double monto) {
-        System.out.println("Pago realizado con Nequi por la cantidad de: " + monto);
+    public String realizarPago(double monto) {
+        return "Pago realizado con Nequi por la cantidad de: " + monto;
     }
     
 }
