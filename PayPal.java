@@ -9,8 +9,8 @@ package co.edu.poli.ejemplo1.project;
  * @author USUARIO
  */
 public class PayPal {
-    public void sendPayment(double amount) {
-        System.out.println("Pago realizado con PayPal por la cantidad de: " + amount);
+    public String sendPayment(double amount) {
+        return "Pago realizado con PayPal por la cantidad de: " + amount;
     }
     
 }
