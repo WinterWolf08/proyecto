@@ -4,9 +4,12 @@
  */
 package co.poli.edu.ejemplo1.modelo.payment;
 
+/**
+ * Adaptador para pagos con PayPal.
+ */
 public class PayPalAdapter implements PaymentAdapter {
     @Override
-    public String processPayment(double amount) {
+    public String processPayment(final double amount) {
         // Lógica para procesar el pago con PayPal
         return "Pago de " + amount + " procesado con PayPal.";
     }
