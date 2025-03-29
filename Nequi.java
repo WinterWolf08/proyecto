@@ -7,7 +7,7 @@ package co.edu.poli.ejemplo1.project;
 /**
  * Clase para manejar pagos con Nequi.
  * 
- * @author USUARIO
+ * @autor USUARIO
  */
 public class Nequi {
     /**
@@ -17,6 +17,9 @@ public class Nequi {
      * @return Un mensaje indicando el resultado del pago.
      */
     public String realizarPago(final double monto) {
+        if (monto <= 0) {
+            return "El monto debe ser mayor que cero.";
+        }
         return "Pago realizado con Nequi por la cantidad de: " + monto;
     }
 }
