@@ -13,7 +13,11 @@ public class PayPalAdapter implements PaymentAdapter {
         if (amount <= 0) {
             return "El monto debe ser mayor que cero.";
         }
-        // Lógica para procesar el pago con PayPal
-        return "Pago de " + amount + " procesado con PayPal.";
+        try {
+            // Lógica para procesar el pago con PayPal
+            return "Pago de " + amount + " procesado con PayPal.";
+        } catch (Exception e) {
+            return "Error al procesar el pago con PayPal: " + e.getMessage();
+        }
     }
 }
