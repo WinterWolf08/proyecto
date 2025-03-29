@@ -10,6 +10,9 @@ package co.poli.edu.ejemplo1.modelo.payment;
 public class NequiAdapter implements PaymentAdapter {
     @Override
     public String processPayment(final double amount) {
+        if (amount <= 0) {
+            return "El monto debe ser mayor que cero.";
+        }
         // Lógica para procesar el pago con Nequi
         return "Pago de " + amount + " procesado con Nequi.";
     }
