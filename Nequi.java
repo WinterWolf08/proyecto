@@ -20,6 +20,11 @@ public class Nequi {
         if (monto <= 0) {
             return "El monto debe ser mayor que cero.";
         }
-        return "Pago realizado con Nequi por la cantidad de: " + monto;
+        try {
+            // Lógica del pago
+            return "Pago realizado con Nequi por la cantidad de: " + monto;
+        } catch (Exception e) {
+            return "Error al realizar el pago con Nequi: " + e.getMessage();
+        }
     }
 }
