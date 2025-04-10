@@ -9,12 +9,8 @@ public class Cliente {
     /**
      * Default constructor
      */
-    public Cliente() {
-    }
+    
 
-    /**
-     * 
-     */
     private String id;
 
     /**
